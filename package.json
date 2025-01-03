@@ -4,12 +4,15 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "dev": "NODE_NO_WARNINGS=1 sst dev"
+  },
   "devDependencies": {
     "@tsconfig/node22": "^22",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   },
   "dependencies": {
-    "sst": "^3"
+    "sst": "^3.4.52"
   }
 }
