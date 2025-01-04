@@ -13,6 +13,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "sst": "^3.4.52"
+    "sst": "^3.4.52",
+    "stripe": "^17.5.0"
   }
 }
