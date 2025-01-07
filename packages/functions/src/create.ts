@@ -18,6 +18,7 @@ export const main = Util.handler(async (event) => {
 
   const params = {
     TableName: Resource.Notes.name,
+    
     Item: {
       // The attributes of the item to be created
       userId: event.requestContext.authorizer?.iam.cognitoIdentity.identityId, // The id of the author
@@ -27,6 +28,9 @@ export const main = Util.handler(async (event) => {
       createdAt: Date.now(), // Current Unix timestamp
     },
   };
+
+  console.log("DynamoDB Table Name:", Resource.Notes.name);
+
 
   await dynamoDb.send(new PutCommand(params));
 
